@@ -7,8 +7,8 @@ Controller controller(ControllerId::master);
 std::shared_ptr<ChassisController> chassis =
 	ChassisControllerBuilder()
 		.withMotors(
-			{17, 18, 19},
-			{12, 13, 14})
+			{-17, -18, 19},
+			{12, -13, -14})
 		.withDimensions(
 			AbstractMotor::gearset::blue,
 			{{4_in, 13_in}, imev5BlueTPR})

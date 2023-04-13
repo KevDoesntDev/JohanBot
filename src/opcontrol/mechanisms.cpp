@@ -29,9 +29,10 @@ void MechanismsTask(void *_)
         }
 
         // Catapult
-        if (controller.getDigital(ControllerDigital::R2) || !limitSwitch.isPressed())
-        {
+        if ((controller.getDigital(ControllerDigital::R2) && !limitSwitch.isPressed()) || controller.getDigital(ControllerDigital::A)) {
             catapult.moveVoltage(12000);
+        } else {
+            catapult.moveVoltage(0);
         }
 
         pros::delay(20);

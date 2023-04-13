@@ -4,7 +4,7 @@ void DrivetrainTask(void *_)
 {
     while (true)
     {
-        drivetrain->arcade(controller.getAnalog(ControllerAnalog::leftY), controller.getAnalog(ControllerAnalog::rightX));
+        drivetrain->arcade(controller.getAnalog(ControllerAnalog::rightX), controller.getAnalog(ControllerAnalog::leftY));
 
         pros::delay(20);
     }
